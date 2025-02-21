@@ -3,9 +3,11 @@ const express = require('express');
 const serverless = require('serverless-http');
 const bodyParser = require('body-parser');
 const openai = require('openai');
+const cors = require('cors');
 
 const app = express();
-
+// Enable CORS.
+app.use(cors())
 // Parsing the incoming data
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
