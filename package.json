@@ -1,0 +1,17 @@
+{
+  "name": "main",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "netlify dev"
+  },
+  "dependencies": {
+    "connect-mongo": "^5.1.0",
+    "cookie-parser": "^1.4.7",
+    "express": "^4.21.0",
+    "express-session": "^1.18.1",
+    "serverless-http": "^3.2.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.36.0"
+  }
+}
