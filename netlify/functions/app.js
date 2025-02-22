@@ -7,14 +7,30 @@ const cors = require('cors');
 
 const app = express();
 // Enable CORS.
-app.use(cors())
+app.use(cors());
 // Parsing the incoming data
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
 
 router = express.Router();
 
-
+/**
+ * Route to get a fact about a Pokémon.
+ * 
+ * Request's body (JSON) should have this form:
+ * 
+ * {
+ *   "name": string
+ * }
+ * 
+ * Response's body (JSON) will have this form:
+ * 
+ * {
+ *  "code": number,
+ *  "message": string
+ * }
+ * 
+ */
 router.post('/completions', async (req, res, next) => {
     try {
         // Get Pokémon's name from request.
@@ -31,7 +47,7 @@ router.post('/completions', async (req, res, next) => {
             ],
         });
 
-        // 3. Return result.
+        // Return result.
         const fact = completion.then((result) => {
             return result.choices[0].message.content ?? 'No response'
         });
@@ -43,7 +59,7 @@ router.post('/completions', async (req, res, next) => {
     }
 })
 
-// Route to Netlify functions.
+// Route to Netlify Functions.
 app.use('/.netlify/functions/app', router);
 module.exports = app;
 module.exports.handler = serverless(app);
