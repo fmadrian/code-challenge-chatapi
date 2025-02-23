@@ -15,6 +15,9 @@ app.use(express.urlencoded({ extended: false }));
 router = express.Router();
 
 /**
+ * 
+ * POST /completions 
+ * 
  * Route to get a fact about a Pokémon.
  * 
  * Request's body (JSON) should have this form:
