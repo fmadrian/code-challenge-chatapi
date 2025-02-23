@@ -29,3 +29,11 @@ npm i
 ```
 npm run dev
 ```
+
+## Tests
+
+To run the unit tests, use the following command in the root folder of this project.
+
+```
+npm run test
+```
