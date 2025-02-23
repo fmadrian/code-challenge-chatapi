@@ -3,13 +3,13 @@
 
 [Adrián Fallas Marín coding challenge solution's](https://github.com/fmadrian/code-challenge/) API.
 
-This API is in charge of forwarding requests from the web application to OpenAI's Completions API. By doing this, we avoid exposing the API key inside the web client.
+API created and deployed with Express and Netlify Functions. This API is in charge of forwarding requests from the web application to OpenAI's Completions API. By doing this, we avoid exposing the API key inside the web client.
 ## How to run?
 
 ### Requirements
 
 1. A valid OpenAI Completions API key.
-2. A Free Netlify account.
+2. A Netlify account.
 3. Rename the file ***.env.example*** to ***.env*** and fill in the missing environment variable.
 ### Deployment
 
